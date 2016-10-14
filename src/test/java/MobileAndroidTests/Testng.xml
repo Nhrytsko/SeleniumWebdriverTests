@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AndroidTests" parallel="tests">
+    <test name="Calendar_Tests">
+
+        <!--Mobile-->
+        <!--if test is running on mobile device set hub=127.0.0.1, driverName=Android, port = 4723 -->
+
+        <parameter name="hub" value="127.0.0.1" />
+        <parameter name="driverName" value="Android" />
+        <parameter name="port" value="4723" />
+        <classes>
+            <class name="MobileAndroidTests.AndroidMobileTestSuite" />
+        </classes>
+    </test>
+</suite>
